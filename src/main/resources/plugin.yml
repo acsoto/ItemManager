@@ -1,0 +1,8 @@
+name: ItemManager
+version: ${project.version}
+main: com.mcatk.itemmanager.ItemManager
+authors: [ soto ]
+website: www.mcatk.com
+commands:
+  im:
+    description: main command
