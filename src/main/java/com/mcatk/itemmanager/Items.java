@@ -21,6 +21,10 @@ public class Items {
         }
     }
     
+    public String getId() {
+        return id;
+    }
+    
     public HashMap<String, ItemStack> getItemStackHashMap() {
         return itemStackHashMap;
     }

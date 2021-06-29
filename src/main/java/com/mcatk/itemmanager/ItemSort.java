@@ -3,6 +3,7 @@ package com.mcatk.itemmanager;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ItemSort {
     private final HashMap<String, Items> itemsHashMap;
@@ -32,6 +33,20 @@ public class ItemSort {
     
     public ItemStack getItem(String id1, String id2) {
         return itemsHashMap.get(id1).getItemStackHashMap().get(id2);
+    }
+    
+    public String listAll() {
+        StringBuilder stringBuilder = new StringBuilder("ItemManager-List:");
+        for (Items items : itemsHashMap.values()) {
+            stringBuilder.append("类型(").append(items.getId()).append("):\n");
+            for (Map.Entry<String, ItemStack> entry :
+                    items.getItemStackHashMap().entrySet()) {
+                stringBuilder.append(entry.getValue().getItemMeta().getDisplayName())
+                        .append("§f(").append(entry.getKey()).append(") ");
+            }
+            stringBuilder.append("\n");
+        }
+        return stringBuilder.toString();
     }
     
 }

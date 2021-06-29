@@ -37,6 +37,9 @@ public class ItemManagerCommand implements CommandExecutor {
             case "give":
                 give();
                 break;
+            case "list":
+                list();
+                break;
             default:
         }
         return true;
@@ -63,6 +66,10 @@ public class ItemManagerCommand implements CommandExecutor {
                 ItemManager.getItemSort().getItem(sortId, itemId)
         );
         sender.sendMessage("Ok");
+    }
+    
+    private void list() {
+        sender.sendMessage(ItemManager.getItemSort().listAll());
     }
     
 }
