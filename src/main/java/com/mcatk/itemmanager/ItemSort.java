@@ -36,9 +36,9 @@ public class ItemSort {
     }
     
     public String listAll() {
-        StringBuilder stringBuilder = new StringBuilder("ItemManager-List:");
+        StringBuilder stringBuilder = new StringBuilder("ItemManager-List:\n");
         for (Items items : itemsHashMap.values()) {
-            stringBuilder.append("类型(").append(items.getId()).append("):\n");
+            stringBuilder.append("§2类型(").append(items.getId()).append("):\n");
             for (Map.Entry<String, ItemStack> entry :
                     items.getItemStackHashMap().entrySet()) {
                 stringBuilder.append(entry.getValue().getItemMeta().getDisplayName())
