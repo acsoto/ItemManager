@@ -14,6 +14,7 @@ public class ItemManagerCommand implements CommandExecutor {
         sender.sendMessage("创建类型: /im create <类型ID>");
         sender.sendMessage("加入物品: /im add <类型ID> <商品ID>");
         sender.sendMessage("获取物品: /im get <类型ID> <商品ID>");
+        sender.sendMessage("列出物品: /im list");
     }
     
     @Override
